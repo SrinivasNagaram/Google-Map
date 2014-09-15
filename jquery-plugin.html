@@ -1,29 +1,30 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Jquery Plugin</title>
+	<title>Simple Jquery Plugin</title>
 </head>
 <body>
 
-	<div></div>
+	
+	<div></div><!-- plugin adds styles to this div element -->
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
 
-		$(document).ready(function () {
+		$(document).ready(function () {  // Below script will excute once dom is loaded
 
-			$.fn.myDiv = function( options ) {
+			$.fn.myDiv = function( options ) { // myDiv is a method
 
-				var defualt = {
+				var defualt = {  // settings defaults
 					'width': '200px',
 					'height': '200px',
 					'background': '#ff0000'
 				}
 
-				var config = $.extend( {}, defualt, options );
+				var config = $.extend( {}, defualt, options ); // extend method merges the contents of two or more objects together into the first object.
 
-				this.css({
+				this.css({ // this is selector example $('div');
 					'width': config.width,
 					'height': config.height,
 					'background': config.background
@@ -34,6 +35,8 @@
 			$('div').myDiv({'background':'#000000'});
 
 		});
+
+		// Written by Srinivas Nagaram
 
 	</script>
 	
